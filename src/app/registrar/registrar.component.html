@@ -1,0 +1,76 @@
+<mat-grid-list cols="2">
+    <mat-grid-tile>
+        <app-presentacion></app-presentacion>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <form [formGroup]="usuarioForm">
+            <mat-form-field class="nombre" appearance="fill">
+                <mat-label>Nombre </mat-label>
+                <input type="text" required matInput formControlName="nombre">
+            </mat-form-field>
+
+            <mat-form-field class="apellido" appearance="fill">
+                <mat-label>Apellido </mat-label>
+                <input type="text" required matInput formControlName="apellido">
+            </mat-form-field>
+
+
+            <mat-form-field class="correo" appearance="fill">
+                <mat-label>Email </mat-label>
+                <input type="email" required matInput formControlName="correo">
+            </mat-form-field>
+
+            <mat-form-field class="indice">
+                <mat-label>#Indicé</mat-label>
+                <mat-select formControlName="indice">
+                    <mat-option [value]="indicativo.indicativo" *ngFor="let indicativo of paises">
+                        {{indicativo.indicativo}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="telefono" appearance="fill">
+                <mat-label>Teléfono </mat-label>
+                <input type="number" matInput required formControlName="telefono">
+            </mat-form-field>
+
+            <mat-form-field class="pais">
+                <mat-label>País</mat-label>
+                <mat-select required formControlName="pais_id">
+                    <mat-option [value]="pais.id" *ngFor="let pais of paises">{{pais.nombre}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field *ngFor="let pregunta of preguntas" class="preguntas">
+                <mat-label>{{pregunta.nombre}}</mat-label>
+                <input type="text" matInput  required formControlName="pregunta{{pregunta.id}}" id="" value="">
+            </mat-form-field>
+
+            <mat-form-field class="contrasena" >
+                <mat-label>Contraseña</mat-label>
+                <input type="password" formControlName="contrasena" matInput id="" required>
+            </mat-form-field>
+
+            <mat-form-field class="contrasena" >
+                <mat-label>Confirmar Contraseña</mat-label>
+                <input type="password" formControlName="confirmar_contrasena" name="" matInput required id="">
+               </mat-form-field>
+             
+              
+                   <mat-label class="titulo">Foto de Perfil</mat-label>
+                   <mat-icon class="foto">
+                    account_box
+                    </mat-icon>
+                   <input mat-raised-button color="accent" class="archivo" type="file"  formControlName="perfil"  (change)="imagenSeleccionada($event)" id="">
+              
+               
+
+            <button class="unirse" (click)="insertarUsuario()" mat-raised-button color="accent">Unirme</button>
+
+            <button class="rutas" mat-button color="accent" (click)="irALogin()">¿Tienes una Cuenta?</button>
+            <button class="rutas" mat-button color="accent" (click)="irALogin()">Iniciar Sesión</button>
+
+        </form>
+
+       
+    </mat-grid-tile>
+</mat-grid-list>

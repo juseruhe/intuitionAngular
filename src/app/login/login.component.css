@@ -1,0 +1,16 @@
+mat-form-field.correoLogin {
+    width: 80%;
+    margin-right: 10%;
+}
+
+mat-form-field.contrasenaLogin{
+    width: 80%;
+    margin-right: 10%;
+}
+
+mat-form-field.iniciarSesion{
+    width: 80%;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+

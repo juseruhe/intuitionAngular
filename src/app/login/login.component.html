@@ -1,0 +1,23 @@
+<mat-grid-list cols="2">
+    <mat-grid-tile>
+  <app-presentacion></app-presentacion>
+    </mat-grid-tile>
+    <mat-grid-tile>
+   <form  [formGroup]="usuarioForm">
+       
+    <mat-form-field>
+    
+    <mat-label>Correo</mat-label>
+    <input type="email" formControlName="correo" class="correoLogin" name="" id="" required matInput>
+    </mat-form-field>
+
+    <mat-form-field>
+     <mat-label>Contraseña</mat-label>
+     <input type="password" formControlName="contrasena" class="contrasenaLogin" name="" id="" required matInput>
+    </mat-form-field>
+
+    <button (click)="loguear()" mat-raised-button class="iniciarSesion" color="accent">Iniciar Sesion</button>
+    <button class="registrarse" mat-button color="accent" (click)="irARegistrar()">¿No Tienes una Cuenta?</button>
+   </form>
+    </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,23 @@
+<h1 mat-dialog-title>Cambiar Pregunta</h1>
+    <form [formGroup]="preguntaForm">
+
+        <div mat-dialog-content>
+
+            <input type="hidden" required  formControlName="id">
+
+        <mat-form-field class="nombre" appearance="fill">
+            <mat-label>Pregunta </mat-label>
+            <input type="text" required matInput formControlName="nombre">
+        </mat-form-field>
+
+    </div>
+
+        <div mat-dialog-actions>
+            <button (click)="actualizarPregunta()" class="rutas" mat-raised-button color="accent">Actualizar</button>
+            <button mat-dialog-close class="rutas" mat-raised-button color="warn">
+                Cerrar
+            </button>
+        </div>
+
+
+</form>

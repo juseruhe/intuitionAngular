@@ -1,0 +1,67 @@
+
+mat-form-field.nombre {
+    width: 45%;
+    margin-right: 5%;
+}
+
+mat-form-field.apellido {
+    width: 45%;
+}
+
+mat-form-field.correo{
+    width: 40%;
+    margin-right: 5%;
+}
+
+
+mat-form-field.indice {
+    width: 10%;
+    margin-right: 3%;
+}
+
+mat-form-field.telefono {
+    width: 30%;
+    
+}
+
+mat-form-field.pais {
+    width: 50%;
+    margin-right: 50%;
+}
+
+mat-form-field.preguntas{
+    width: 40%;
+    margin-right: 10%;
+}
+
+mat-form-field.contrasena{
+    width: 40%;
+    margin-right: 10%;
+}
+
+mat-label.titulo{
+    width: 40%;
+    margin-right: 10%;
+}
+
+mat-icon.foto{
+    width: 40%;
+    margin-right: 10%;
+}
+
+.archivo{
+    width: 80%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+}
+
+button.unirse{
+    width: 80%;
+    margin-right: 10%;
+}
+
+button.rutas{
+  width:40%;
+  margin-right: 10%;
+  margin-top: 5%;
+}

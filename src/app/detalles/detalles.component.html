@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Datos de {{this.mostrarUsuario.nombre}} {{mostrarUsuario.apellido}}</h1>
+<div mat-dialog-content>
+<img src="http://localhost:8000/storage/{{mostrarUsuario.perfil}}" alt="perfil de {{mostrarUsuario.nombre}} {{mostrarUsuario.apellido}}" width="20%">
+<p><b>Nombres y Apellidos:  </b> {{mostrarUsuario.nombre}} {{mostrarUsuario.apellido}}</p>
+<p><b>País: </b> {{mostrarUsuario.pais}}</p>
+<p><b>Correo: </b> {{mostrarUsuario.correo}}</p>
+<p><b>Teléfono: </b> {{mostrarUsuario.telefono}}</p>
+
+<div *ngFor="let pregunta of preguntas">
+<p><b>{{pregunta.pregunta}}:  </b> {{pregunta.respuesta}}</p>
+</div>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="warn" mat-dialog-close>
+    <mat-icon>cancel</mat-icon>
+    Cerrar
+  </button>
+</div>
